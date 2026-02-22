@@ -19,12 +19,17 @@
            fetch="https://codeberg.org/LFS-dump"
            revision="15" />
 
+  <!--Infinity A15 -->
+  <remote name="bava"
+          fetch="https://github.com/kaderbava"
+          revision="15" />
+
   <!-- manifest -->
-  <project path="manifest" name="manifest" remote="infinity" />
+  <project path="manifest" name="ProjectInfinity-X-manifest" remote="bava" />
 
   <!-- build -->
-  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="infinity" />
-  <project path="build/make" name="build" groups="pdk" remote="infinity" >
+  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="bava" />
+  <project path="build/make" name="build" groups="pdk" remote="bava" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -33,7 +38,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="infinity" >
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="bava" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -42,21 +47,21 @@
   <project path="bootable/recovery" name="bootable_recovery" remote="infinity" />
 
   <!-- device -->
-  <project path="device/lineage/sepolicy" name="device_infinity_sepolicy" remote="infinity" />
+  <project path="device/lineage/sepolicy" name="device_infinity_sepolicy" remote="bava" />
 
   <!-- external -->
   <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="infinity" />
   <project path="external/bouncycastle" name="external_bouncycastle" groups="pdk" remote="infinity" />
 
   <!-- frameworks -->
-  <project path="frameworks/base" name="frameworks_base" remote="lfs" />
-  <project path="frameworks/av" name="frameworks_av" remote="infinity" />
-  <project path="frameworks/native" name="frameworks_native" remote="infinity" />
+  <project path="frameworks/base" name="frameworks_base_15" remote="bava" revision="15-infinity" />
+  <project path="frameworks/av" name="frameworks_av" remote="bava" />
+  <project path="frameworks/native" name="frameworks_native" remote="bava" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="infinity" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" remote="infinity" />
 
   <!-- general -->
-  <project path="art" name="art" remote="infinity" />
+  <project path="art" name="art" remote="bava" />
   <project path="bionic" name="bionic" remote="infinity" />
 
   <!-- hardware -->
@@ -65,27 +70,28 @@
   <!-- packages -->
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="infinity" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="infinity" />
-  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="infinity" />
+  <project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="bava" />
   <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="infinity" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="infinity" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="infinity" />
   <project path="packages/apps/BtHelper" name="packages_apps_BtHelper" remote="infinity" />
   <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="infinity" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="lfs" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="bava" revision="15-infinity" />
   <project path="packages/apps/InfinitySuite" name="packages_apps_InfinitySuite" remote="lfs" />
   <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="infinity" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="lfs" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="bava" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="infinity" groups="apps_nfc,pdk-fs,pdk-cw-fs" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="infinity" />
+  <project path="packages/apps/SimpleSettingsConfig" name="android_packages_apps_SimpleSettingsConfig" remote="bava" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="infinity" />
   <project path="packages/services/DeviceAsWebcam" name="packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="bava" />
   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="infinity" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="lfs" revision="master" />
   <project path="packages/modules/adb" name="packages_modules_adb" groups="pdk" remote="infinity" />
-  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="infinity" />
+  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="bava" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="infinity" />
-  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="infinity" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="bava" />
   <project path="packages/overlays/Themes" name="packages_overlays_Themes" remote="infinity" />
   <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="infinity" />
 
@@ -93,15 +99,17 @@
   <project path="prebuilts/infinity-sdk" name="prebuilts_infinity-sdk" remote="infinity" />
 
   <!-- system -->
-  <project path="system/core" name="system_core" remote="infinity" />
+  <project path="system/core" name="system_core" remote="bava" />
   <project path="system/libhidl" name="system_libhidl" remote="infinity" />
-  <project path="system/sepolicy" name="system_sepolicy" remote="infinity" />
-  <project path="system/update_engine" name="system_update_engine" remote="infinity" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="bava" />
+  <project path="system/update_engine" name="system_update_engine" remote="bava" />
+  <project path="system/memory/lmkd" name="crdroidandroid/android_system_memory_lmkd" groups="pdk" remote="github" revision="15.0" />
+  <project path="system/media" name="crdroidandroid/android_system_media" groups="pdk" remote="github" revision="15.0" />
 
   <!-- vendor -->
   <project path="vendor/google/gms" name="vendor_google_gms" remote="lfs" revision="15" clone-depth="1" />
-  <project path="vendor/bcr" name="vendor_bcr" remote="infinity" revision="QPR3" />
+  <project path="vendor/bcr" name="crdroidandroid/vendor_bcr" remote="github" revision="15.0" />
   <project path="vendor/support" name="vendor_support" remote="infinity" />
   <project path="vendor/extras" name="vendor_extras" remote="infinity" clone-depth="1" />
-  <project path="vendor/infinity" name="vendor_infinity" remote="infinity" />
+  <project path="vendor/infinity" name="vendor_infinity" remote="bava" />
 </manifest>

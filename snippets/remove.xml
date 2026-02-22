@@ -124,6 +124,7 @@
   <remove-project name="platform/packages/apps/Launcher3" />
   <remove-project name="platform/packages/apps/Nfc" />
   <remove-project name="platform/packages/apps/ThemePicker" />
+  <remove-project name="platform/packages/providers/MediaProvider" />
   <remove-project name="platform/packages/providers/DownloadProvider" />
   <remove-project name="platform/packages/modules/adb" />
   <remove-project name="platform/packages/modules/Bluetooth" />
@@ -134,11 +135,18 @@
   <remove-project name="platform/packages/modules/Virtualization" />
   <remove-project name="platform/packages/services/DeviceAsWebcam" />
   <remove-project name="platform/packages/services/Iwlan" />
+  <remove-project name="platform/packages/services/Mms" />
   <remove-project name="platform/packages/modules/Permission" />
   <remove-project name="platform/packages/providers/TelephonyProvider" />
   <remove-project name="platform/packages/services/Telephony" />
   <remove-project name="platform/packages/services/Telecomm" />
   <remove-project name="platform/packages/inputmethods/LatinIME" />
+  <remove-project name="platform/packages/modules/CellBroadcastService" />
+  <remove-project name="platform/packages/modules/IntentResolver" />
+  <remove-project name="platform/packages/apps/CertInstaller" />
+  <remove-project name="platform/external/sqlite" />
+  <remove-project name="platform/external/skia" />
+  <remove-project name="platform/external/dng_sdk" />
 
   <!-- system -->
   <remove-project name="platform/system/bpf" />
@@ -152,4 +160,5 @@
   <remove-project name="platform/system/media" />
   <remove-project name="platform/system/netd" />
   <remove-project name="platform/system/nfc" />
+  <remove-project name="platform/system/memory/lmkd" />
 </manifest>
